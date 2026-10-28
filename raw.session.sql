@@ -1,0 +1,1 @@
+select count(*) from raw.jobs.raw_job_postings;
