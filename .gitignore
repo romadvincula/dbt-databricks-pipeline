@@ -10,6 +10,11 @@ wheels/
 # Virtual environments
 .venv
 
-
 # dbt
 logs/
+
+# sqltools
+temp_sql/
+
+# others
+lessons/
