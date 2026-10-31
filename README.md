@@ -23,7 +23,7 @@ A production dbt pipeline on **Databricks** over 843,097 raw job-posting scrapes
 
 ## ⚙️ The dbt Pipeline
 
-Raw scrapes flow through the medallion layers — raw → staging → intermediate → the star-schema marts — while snapshots capture history off staging. The lineage graph below is every model dbt builds:
+Raw scrapes flow through the medallion layers — raw → staging → intermediate → the star-schema marts — while snapshots capture history off staging. The lineage graph below is those relevant to the fact table build:
 
 ![dbt lineage graph](img/lineage.png)
 
@@ -73,7 +73,7 @@ The marts keep each job's **latest** scrape — the snapshot table keeps **every
 
 Structure, tests, and column descriptions were written along the way — the docs site is a rendering of work already done:
 
-**→ [lukebarousse.github.io/dbt_Analytics_Engineering_Course/project2/](https://lukebarousse.github.io/dbt_Analytics_Engineering_Course/project2/)**
+**→ [romadvincula.github.io/dbt-databricks-pipeline/](https://romadvincula.github.io/dbt-databricks-pipeline/)**
 
 The site shows:
 
@@ -119,4 +119,4 @@ Backfill a year of snapshot history in one query: paste [`scripts/backfill_job_p
 
 ---
 
-Based from [dbt for Data Analytics & Engineering course](https://www.lukebarousse.com) (lessons 3.01–4.02) by Luke Barousse - built by myself and compare against this version. Dataset: real job postings scraped daily, July 2025 – June 2026.*
+Based from [dbt for Data Analytics & Engineering course](https://www.lukebarousse.com) (lessons 3.01–4.02) by Luke Barousse - built by myself and compared against this version. Dataset: real job postings scraped daily, July 2025 – June 2026.*
